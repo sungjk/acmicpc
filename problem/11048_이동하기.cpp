@@ -49,3 +49,47 @@ int main() {
 
 	return 0;
 }
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+//
+// const int DIR[3][2] = {
+//     1, 0,
+//     0, 1,
+//     1, 1
+// };
+// vector<vector<int> > maze;
+// vector<vector<int> > cache;
+//
+// // (x, y)에 있을 떄 사탕의 최대 개수
+// int tour(int x, int y) {
+//     if (x == maze[0].size() - 1 && y == maze.size() - 1) return maze[y][x];
+//
+//     int& ret = cache[y][x];
+//     if (-1 != ret) return ret;
+//
+//     for (int d = 0; d < 3; ++d) {
+//         int nextx = x + DIR[d][0];
+//         int nexty = y + DIR[d][1];
+//         if (nextx <= maze[0].size() - 1 && nexty <= maze.size() - 1) {
+//             ret = max(ret, maze[y][x] + tour(nextx, nexty));
+//         }
+//     }
+//     return ret;
+// }
+//
+// int main() {
+//     int width, height; cin >> height >> width;
+//     maze.assign(height + 1, vector<int>(width + 1, 0));
+//     cache.assign(height + 2, vector<int>(width + 2, -1));
+//     for (int y = 1; y <= maze.size() - 1; ++y) {
+//         for (int x = 1; x <= maze[0].size() - 1; ++x) {
+//             cin >> maze[y][x];
+//         }
+//     }
+//     cout << tour(1, 1) << endl;
+//
+//     return 0;
+// }
