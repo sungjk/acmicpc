@@ -61,6 +61,7 @@ project(":acmicpc-kotlin") {
 
     dependencies {
         compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+        compile "junit:junit:latest.release"
         testCompile "org.jetbrains.kotlin:kotlin-test"
         testCompile "org.jetbrains.kotlin:kotlin-test-junit"
     }
