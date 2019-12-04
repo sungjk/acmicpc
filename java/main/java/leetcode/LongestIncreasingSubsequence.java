@@ -3,6 +3,8 @@ package leetcode;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.stream.IntStream;
+
 /**
  * https://leetcode.com/problems/longest-increasing-subsequence/
  * Created by Jeremy on 04/12/2019.
@@ -67,5 +69,10 @@ public class LongestIncreasingSubsequence {
     @Test
     public void test8() {
         Assert.assertEquals(6, lengthOfLIS(new int[] {3,5,6,2,5,4,19,5,6,7,12}));
+    }
+
+    @Test
+    public void test9() {
+        Assert.assertEquals(2500, lengthOfLIS(IntStream.range(1, 2501).boxed().mapToInt(i -> i).toArray()));
     }
 }
