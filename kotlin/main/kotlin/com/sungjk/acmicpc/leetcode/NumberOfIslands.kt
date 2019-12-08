@@ -10,8 +10,8 @@ import org.junit.Test
 class NumberOfIslands {
     fun numIslands(grid: Array<CharArray>): Int {
         val visited = Array(grid.size) { BooleanArray(grid[0].size) { false } }
-        return grid.mapIndexed { y, chars -> chars
-            .mapIndexed { x, _ ->
+        return grid.mapIndexed { y, chars ->
+            chars.mapIndexed { x, _ ->
                 mark(grid, visited, x, y)
             }.sum()
         }.sum()
