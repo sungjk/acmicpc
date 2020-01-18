@@ -24,6 +24,7 @@ class WiggleSortII {
 
     @Test
     fun test1() {
+        println("===========================")
         val nums = intArrayOf(1, 5, 1, 1, 6, 4).also { wiggleSort(it) }
         Assert.assertArrayEquals(intArrayOf(1,6,1,5,1,4), nums)
     }

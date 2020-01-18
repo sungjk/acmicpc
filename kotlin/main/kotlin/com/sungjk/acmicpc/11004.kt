@@ -15,7 +15,6 @@ fun main(args: Array<String>) {
     val br = BufferedReader(InputStreamReader(System.`in`))
     val str = StringTokenizer(br.readLine())
     val length = str.nextToken().toInt()
-    val targetIndex = str.nextToken().toInt()
     val arr = Array(length) { 0 }
     for (i in 0 until length) {
         arr[i] = str.nextToken().toInt()

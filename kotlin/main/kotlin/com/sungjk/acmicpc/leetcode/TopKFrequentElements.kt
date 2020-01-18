@@ -7,27 +7,17 @@ import org.junit.Test
  * Created by jeremy on 2019/10/15.
  */
 class TopKFrequentElements {
-
     fun topKFrequent(nums: IntArray, k: Int): List<Int> {
         val map = mutableMapOf<Int, Int>()
-        return nums
-            .map { num ->
-                if (map.containsKey(num)) {
-                    val prev = map[num]!!
-                    Pair(num, prev + 1)
-                } else {
-                    Pair(num, 1)
-                }
+        nums.map { num ->
+            if (map.containsKey(num)) {
+                val prev = map[num]!!
+                map[num] = prev + 1
+            } else {
+                map[num] = 1
             }
-            .toMap()
-            .entries
-            .asSequence()
-            .distinctBy { it.key }
-            .sortedByDescending { it.value }
-            .take(k)
-            .map { it.key }
-            .sorted()
-            .toList()
+        }
+        return map.entries.distinctBy { it.key }.sortedByDescending { it.value }.take(k).map { it.key }.sorted()
     }
 
     @Test
