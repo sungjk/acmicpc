@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.3.20'
+    ext.kotlin_version = '1.3.61'
 
     repositories {
         mavenCentral()
@@ -24,7 +24,7 @@ project(":acmicpc-java") {
 
     sourceSets {
         main.java.srcDirs += 'main/java'
-        test.java.srcDirs += 'test/java'
+        test.java.srcDirs += 'main/java'
     }
 
     dependencies {
@@ -45,7 +45,7 @@ project(":acmicpc-kotlin") {
 
     sourceSets {
         main.kotlin.srcDirs += 'main/kotlin'
-        test.kotlin.srcDirs += 'test/kotlin'
+        test.kotlin.srcDirs += 'main/kotlin'
     }
 
     compileKotlin {

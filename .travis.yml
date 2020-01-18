@@ -1,0 +1,15 @@
+language: java
+
+jdk:
+  - openjdk10
+
+before_script:
+  - chmod a+x gradlew
+
+script: ./gradlew clean build
+
+notifications:
+  email:
+    recipients:
+      - fishercoder@gmail.com
+    on_failure: always
