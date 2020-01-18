@@ -1,15 +1,12 @@
 language: java
-
-install: true
-
 jdk:
   - openjdk8
-
+before_install:
+  - chmod +x gradlew
+  - chmod +x gradle/wrapper/gradle-wrapper.jar
 sudo: true
-
 script:
   - ./gradlew clean test
-
 notifications:
   email:
     recipients:
