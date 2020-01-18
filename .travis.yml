@@ -3,10 +3,8 @@ language: java
 jdk:
   - openjdk10
 
-before_script:
-  - chmod a+x gradlew
-
-script: ./gradlew clean test
+script:
+  - ./gradlew clean test
 
 notifications:
   email:
