@@ -11,5 +11,5 @@ script: ./gradlew clean build
 notifications:
   email:
     recipients:
-      - fishercoder@gmail.com
+      - ajax0615@gmail.com
     on_failure: always
