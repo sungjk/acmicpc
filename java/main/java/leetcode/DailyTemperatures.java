@@ -16,17 +16,16 @@ public class DailyTemperatures {
         Arrays.fill(days, 0);
 
         for (int i = 0; i < T.length; i++) {
-            int count = 0;
             int end = 0;
             for (int j = i + 1; j < T.length; j++) {
-                count++;
+                days[i]++;
                 if (T[j] > T[i]) {
                     end = 1;
                     break;
                 }
             }
-            if (end == 1) {
-                days[i] = count;
+            if (end == 0) {
+                days[i] = 0;
             }
         }
 
